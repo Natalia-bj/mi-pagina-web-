@@ -1,0 +1,232 @@
+/*Selector de etiqueta*/
+body{
+    background-color: rgb(255, 170, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    color: black;
+}
+
+/*Selector de clase (mas especifico que el de etiqueta)*/
+.titulo{
+    border:4pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+/*Selector de id (mas especifico que los anteriores)*/
+#ENL, #ENL_INT{
+    font-size: 14pt;
+    color: rgb(255, 115, 0);
+}
+/*Selector de descendientes (se lee de derecha a izq)*/
+
+body p{
+    text-align: justify;
+}
+
+/*Estilo de la tabla*/
+/*Selector universal(*)*/
+table *{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: crimson;
+    border-style: double;
+    border-width: 1px;
+}
+
+table tbody{
+    background-color: rgb(87, 153, 79); 
+    height: 50px;
+}
+
+caption{
+    color: goldenrod;
+    font-size: 30px;
+    background-color: lightsalmon;
+}
+
+th{
+    border-color: rgb(50, 156, 175);
+    border-style: dotted;
+    width: 1pt;
+}
+
+td{
+    border-color: bisque;
+    color: blueviolet;
+    border-style: 1pt;
+    border-width: 1pt;
+}
+
+h2{
+    font-size: 120%;
+    border-color: blanchedalmond;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: bisque;
+    -webkit-text-fill-color: gold;
+    border: 5px snow double;
+}
+
+h2{
+    margin-top: 100px;
+    color: rgb(142, 158, 228);
+}
+
+h3{
+    border-color: aliceblue;
+    border: 3px white;
+}
+
+
+.firma{
+    border-color: darkolivegreen;
+    background-color: antiquewhite;
+    border-style: hidden;
+    text-align: center;
+    font-size: 8pt;
+}
+ /*empezamos con un punto porque es un selector de clase*/
+.Contenedor{
+    box-sizing: border-box;
+    width: 100%;
+    height: 430px;
+    border: solid black 5px;
+}
+
+.titulo,.intro,.cont123,.cont45,.fuera,.firma{
+    margin-top: 5px;
+}
+
+.caja1{
+    background-color: aliceblue;
+    float: left;
+    text-shadow: 3px;
+    text-align: left;
+    font-style: italic;
+}
+
+.caja2{
+    background-color: blueviolet;
+    float: right;
+    text-align: center;
+    font-style: italic;
+}
+
+.caja1,.caja2{
+    box-sizing: border-box;
+    height: 200px;
+    width: 50%;
+    padding: 10px;
+}
+
+.caja3{
+    background-color: darkgoldenrod;
+    box-sizing: content-box;
+    width: (100%-5px); /*para que ocupe todo el ancho menos lo que ocupa el borde de contenedor*/
+    height: 200px;
+    clear: both;/* se coloca debajo de las otras cajas automáticamente*/
+    padding:10px;/*margen*/
+    text-align: right;
+}
+
+.fuera{
+    background-color: orchid;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: solid green;
+}
+
+.titulo{
+    background-color: rgb(245, 78, 78);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: solid rgb(116, 3, 3);
+}
+
+.intro{
+    background-color: rgb(255, 212, 70);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: solid rgb(179, 152, 0);
+}
+
+.cont123{
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: solid rgb(0, 0, 0);
+    padding: 10px;
+
+}
+
+.cont123::after{
+    content: "";
+    display:block; /* quiero que sea un elemento de bloque y que ocupe todo el espacio aunq no tng contenio */
+    clear:both;
+}
+
+.cont1{
+    background-color: rgb(96, 255, 96);
+    height: 100%;
+    border: solid rgb(0, 70, 0);
+    margin-left: 5px;
+}
+
+.cont2{
+    background-color: rgb(109, 189, 255);
+    height: 100%;
+    border: solid rgb(1, 77, 100);
+    margin-left: 5px;
+
+}
+
+.cont3{
+    background-color: rgb(188, 86, 228);
+    height: 100%;
+    border: solid rgb(66, 3, 82);
+    margin-right: 5px;
+}
+.cont1,.cont2,.cont3{
+    box-sizing: border-box;
+    float:left;
+    width: 33%;
+    padding: 5px;
+}
+
+.cont45{
+    background-color: rgb(202, 86, 131);
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: solid rgb(185, 1, 102);
+}
+.intro::first-letter{
+    font-size: 150%;
+    color:rgb(0, 172, 106);
+}
+
+.a:visited:hover{ /*cambie de color el link una vez que entras*/
+    color:blueviolet
+}
+
+figcaption{
+    font:9px grey;
+    font-style: oblique;
+    text-align: center;
+}
+
+figcaption ::before{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+table{
+    width:40%;
+    margin:0auto;
+}

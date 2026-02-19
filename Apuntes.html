@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Apuntes HTML :D</title> 
+   <meta lang="es">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="robots" content="index, no follow">
+   <meta name="generator" content="Visual Studio Code">
+   <meta name="description" content="Apuntes de HTML">
+   <meta name="author" content="NRA">
+   <link rel="shortcut icon" type="image/png" href="favicon.ico"><!--El icono
+       lo creo en: https://www.ionos.es/tools/crear-favicon#tool-->
+   <link href="estilo_apuntes.css" rel="stylesheet">
+  </head>
+    
+  <body>
+    <div class="titulo">
+      <h1> LENGUAJE HTML</h1>
+    </div>
+    <div class="intro">
+      <p>Es el lenguaje de marcas que utilizamos para dotar de estructura al 
+      contenido de la Web. Las etiquetas dotan de significado semántico al
+      texto que encierran, y que será interpretado por el navegador.</p>
+
+      <p>HTML no se preocupa de la presentación de los elementos, sino solo de su
+      definición. De hecho, puede usarse un simple editor de texto. Para la 
+      presentación se usa otro lenguaje, el CSS. Así, todo lo que tenga que ver con 
+      la presentación deberemos modificarlo mediante CSS, preferiblemente.</p>
+    </div>
+    <div class="cont123">
+      <div class="cont1">
+        <h2>1. ETIQUETAS</h2>
+        <p>Las etiquetas son una forma de estructurar una página web y su contenido.
+        La mayoría de las etiquetas aparecen de dos en dos, con una de inicio
+        y otra de cierre, y siempre encerradas entre dos símbolos de desigualdad 
+        (menor que <code>&lt;</code> y mayor que <code>&gt;</code>).<br>
+        Existen algunas etiquetas (que no llevan nunca contenido) que no van en 
+        parejas, sino que aparecen aisladas sin etiqueta de cierre. Por ejemplo:
+        <code>img, br</code>(salto de linea).<br>
+        Las etiquetas se pueden escribir con mayúsculas o con minúsculas, pero 
+        lo más común es escribirlas en minúsculas.<br>
+        Las etiquetas, además de su nombre, pueden proporcionar más información 
+        sobre el elemento empleando atributos a continuación de su nombre. Estos
+        atributos suelen aparecer como: atributo = "valor" o atributo = `valor´,
+        y puede haber más de un atributo.<br>
+        Una buena práctica a la hora de escribir nuestro código HTML es cuidar
+        su presentación para mejorar la legibilidad. En tipografía esto se llama
+        SANGRAR, y en informática INDENTAR el código.<br></p>
+      </div>
+      <div class="cont2">
+        <h2>2. ATRIBUTOS</h2>
+        <p>Hay dos atributos que destacan por su versatilidad y porque se usan mucho
+        para/p poder trabajar con CSS y JavaScript para facilitar la comunicación
+        entre estos distintos lenguajes:</p>
+        <ul>
+          <li><code> class </code>: el valor asignado pueden tenerlo diferentes elementos de la página.</li>
+          <li><code> id </code>: el valor asignado debe ser único, y no repetirse.</li>
+        </ul>
+
+        <p>Una lista completa de atributos disponibles, junto con las etiquetas
+        HTML en las que están permitidos y su descripción, puede encontrarse en
+        la página de referencia de atributos HTML de la Fundación Mozilla:
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes">Mas atributos html</a></p>
+      </div>
+      <div class="cont3">
+        <h2>3. ESTRUCTURA DEL DOCUMENTO</h2>
+        <h3>3.1. TIPO DE DOCUMENTO</h3>
+        <p>La estructura básica de un documento HTML bien construido debe comenzar 
+        con la declaración del tipo de documento (doctype), que es el 
+        medio por el que indicamos al navegador qué versión de HTML vamos a utilizar. 
+        Con HTML5, que es la versión que vamos a usar, solo hay que indicar:</p>
+        <code>&lt!DOCTYPE html&gt</code>
+        Hay otros tipos de valores para el tipo de documento, según la versión de
+        HTML a utilizar.
+
+        <h3>3.2. CONTENIDO DE LA PÁGINA</h3>
+        <p>A continuación, aparecerá la etiqueta <code>html</code>, que 
+        encierra todo el contenido de la página. La etiqueta de cierre <code>&lt /html &gt</code>
+        siempre aparecerá al final del documento, y no debe 
+        escribirse nada tras ella.</p>
+
+        <h3>3.3. HEAD Y BODY</h3>
+        <p>Dentro del elemento <code>html</code> incluiremos, obligatoriamente, otros
+        dos elementos "hijos": <code>head</code> y <code>body</code>.</p>
+        <ul>
+          <li><code>head</code>: es el primer elemento, tras la etiqueta de apertura
+        de html. Se empleará para proporcionar información al 
+        navegador sobre la página (cómo se llama, cuáles son las palabras clave 
+        utilizadas, quién es su autor, con qué SW se ha creado, qué idioma utiliza,
+        ...). Son los metadatos de la web, y no se mostrarán dentro del documento.</li>
+          <li> <code>body</code>: albergará el contenido visible del sitio.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cont45">
+      <h2>4. ELEMENTOS</h2>
+      <p>Las etiquetas de apertura y cierre con contenido entre ellas forman un 
+      ELEMENTO HTML.</p>
+      <p>Los elementos tienen dos variantes:</p>
+      <ul>
+        <li>Elementos de bloque: marcan secciones más grandes, o bloques, dentro
+        del documento. Ocupan (salvo que se modifique mediante CSS) el 100% 
+        del ancho de la página. Además, el navegador web coloca nuevas líneas 
+        alrededor de los elementos de bloque, para que aparezcan en su propia 
+        línea.</li>
+        <li>Elementos en línea: para trozos más pequeños, normalmente dentro de
+        una línea. No podremos modificar las propiedades relacionadas con su 
+        tamaño, ya que será, siempre, el de su contenido.</li>
+      </ul>
+
+      <h3>4.1. PRINCIPALES ELEMENTOS DE BLOQUE</h3>
+      <p>Normalmente, los hijos directos de body serán elementos 
+      estructurales que organizan la página. Todos ellos, veremos varios, son 
+      elementos de bloque.</p>
+
+      <ol>
+
+      <li><p>Párrafos.<br>
+        El elemento de bloque más empleado para contener texto, que permite definir párrafos. 
+        En su interior puede haber texto, otros elementos en línea (inline), pero no elementos de bloque. 
+        Si no modificamos su aspecto usando CSS, los navegadores los muestran añadiendo un margen superior e inferior que sirve para diferenciar unos párrafos de otros en texto 
+        escrito. Si deseamos introducir un salto de línea, sin crear un nuevo párrafo, podremos recurrir a la etiqueta vacía <code>br</code>.</p>
+      </li>
+      <li><p><code>div</code><br>
+        Sirve para crear una agrupación dentro de la cual se pueden incluir otros elementos. Además se le puede poner un atributo <code> id </code> o <code>class</code>. 
+        Los usaremos cuando creemos cajas, en el apartado 5.<br>
+      </p>
+      </li>
+      <li><p>Encabezados.<br>
+        HTML proporciona 6 niveles de encabezados o títulos: h1, h2, h3, h4, h5 y h6, de mayor a menor importancia.</p>
+      </li>
+      
+      <li><p>Listas.<br>
+        Tres tipos de listas: ordenadas <code>ol</code>, desordenadas <code>ul</code>  y listas de definición <code>dl</code>. 
+        Todas las listas pueden mostrar otras listas dentro de alguno de sus elementos. 
+        Son las llamadas LISTAS ANIDADAS. Nótese dónde se cierra el elemento <code>li</code> que contiene otra lista.
+        Ahí va un ejemplo (ojo con la lista de definición):</p>
+        <dl>
+          <dt>Lista anidada 1:</dt>
+            <dd>Con listas ordenadas:</dd>
+              <ol>
+                <li>uno</li>
+                <li>dos</li>
+                <li>tres</li>
+              </ol>
+          <dt>Lista anidada 2:</dt>
+          <ddCon listas desordenadas:></dd>
+            <ul>
+              <li>punto1</li>
+              <li>punto2</li>
+              <li>punto3</li>
+            </ul>
+        </dl>
+      </li>
+      <li>Citas.
+      <p>En ocasiones nos puede resultar útil mostrar fragmentos de textos procedentes de otras fuentes. 
+      Cuando estos fragmentos no se limitan a unas pocas palabras, sino que forman un elemento de bloque (como un párrafo) emplearemos la etiqueta <code>blockquote</code> para identificarlos.</p>
+      </li> 
+      </ol>
+      <h3>4.2. ELEMENTOS INLINE O EN LÍNEA</h3>
+      <p>Suelen usarse principalmente para contener texto que no forma bloques, como caracteres o palabras aisladas.</p>
+      <ol>
+      <li><P id="ENL">Enlaces.</p>
+      <p>Son el elemento más innovador del lenguaje html. Mediante ellos podemos enlazar en un documento diferentes recursos al pulsar sobre ellos. 
+      Para crearlos, disponemos de la etiqueta  <code>a</code>(anchor); el destino al que nos llevarán se lo indicamos empleando el atributo <code>href</code>. 
+      En su interior suele aparecer el texto del enlace, pero también puede haber imágenes y otros elementos de bloque.<br>
+      Quedaría algo así:
+      <p><code>&lt;a href="https://www.educa.jcyl.es/es"&gt;Aquí va el texto que quiero que aparezca &lt;/a&gt;</code><br></p>
+      Hay dos tipos de enlaces:<br>
+      <ul>
+        <li>DIRECCIÓN ABSOLUTA: incluye la ruta completa al recurso (URL): protocolo, servidor y ruta. Ejemplo:
+         <p><code> &lt;a href="http://test.site.es/sitio/contacto.html"&gt;Contacto&lt;/a&gt;</code><br></p>
+        </li>
+        <li>DIRECCIÓN RELATIVA: indica la ruta al recurso desde la ubicación del elemento desde el que se enlaza. Es decir, podremos usarlas cuando el sitio al que queramos ir esté en el mismo servidor que nuestra página. Ventajas: puedo crearlo antes de disponer de un dominio, y es más corto.<br> 
+          Ejemplo:
+          <p>&lt;a href="sitio/contacto.html"&gt;Contacto<code>&lt;/a&gt;</code><br></p>
+        </li>
+      Además, si deseamos que el enlace se abra en una ventana nueva, podemos indicarlo mediante el atributo: target="_blank":
+        <p><code><a href="sitio/contacto.html" target="_blank">Contacto</a></code><br></p>
+      También podemos decir al navegador que, en vez de cargar el destino del enlace, lo descargue. Usaremos el atributo download.
+    </ul>
+    </p></li>
+       <li><p id="ENL_INT">Enlaces internos</p>
+      En documentos de mucha extensión podemos crear enlaces a secciones dentro del mismo documento. 
+      Se crean utilizando el atributo <code>id</code> en los destinos de los enlaces y dando el valor del <code>id</code> del destino, precedido por el carácter almohadilla <code>#</code> al atributo <code>href</code> de los enlaces.<br>
+      Voy a actualizar los dos elementos de la lista del apartado 4.2 para que se vea un ejemplo; al pinchar en los dos enlaces que escribiré a continuación, me llevará al apartado correspondiente:<BR>
+        <ol>
+          <li><a href="#ENL">Enlaces</a></li>
+          <li><a href="ENL_INT">Enlaces internos</a></li>
+        </ol>
+      </p></li>
+       <li>Etiqueta <code>span</code>
+        <p>Este elemento es un contenedor en línea (ocupa lo que ocupe su contenido) genérico que usaremos cuando queramos definir un elemento sin dotarlo de significado semántico. 
+      Es similar al elemento div, pero aquel era de bloque y este es de línea. Se usa normalmente para acceder al elemento usando CSS y asignarle estilos diferenciados.</p>
+      </li> 
+      - <li>Etiqueta <code>em</code>
+      <p>Para dar cierto énfasis a un elemento disponemos de las etiquetas <code>em</code>. 
+        Los navegadores suelen representar el texto que contiene en cursiva, como la etiqueta <code>i</code>, pero este comportamiento lo podremos modificar mediante CSS.</p>
+      </li>
+      <li>Etiqueta <code>strong</code>
+      <p>Se emplea para indicar que su contenido queremos resaltarlo con mayor énfasis que la etiqueta <code>em</code>. 
+        Los navegadores suelen representarlo en negrita, al igual que la etiqueta <code>b</code>. Como todas las etiquetas HTML, no debemos emplearla con fines visuales, sino semánticos. 
+        Con CSS ajustaremos cómo queremos que se muestren estos elementos <code>strong</code>.</p>
+      </li>
+      <li>Las citas
+        <p>Para pequeñas citas en línea que no crean nuevos párrafos, tenemos el elemento <code>q</code>. 
+        Simplemente, coloca "" en el texto y lo marca para el caso de que quisiéramos aplicarle algún formato en CSS.<br>
+        Quedaría así: Como decía mi abuela: <q>Más vale pájaro en mano que ciento volando</q>
+        </p>
+      </li>
+      <li>Etiquetas para incluir código
+        <p>Hay dos elementos principales para incluir código de cualquier tipo en nuestro documento HTML: <code>code</code> y <code>pre</code>:
+        <ul>
+         <li><code>code</code> es un elemento en línea que encierra fragmentos de código.</li>
+         
+          <li><code>pre</code> puede contener la etiqueta <code>code</code> para convertirla en un elemento de bloque y que aparezca respetando los espacios en blanco y los saltos de línea.
+            Ahí va un ejemplo con una regla en CSS:
+            <pre><code>
+           {
+              font-family: arial, sanserif;
+            }
+          </code>
+          </pre>
+          </li>
+      </ul>
+      </p>
+      </li>
+      </ol>
+      <h3>4.3. ELEMENTOS INCRUSTADOS</h3>
+      <ol>
+
+      <li>La etiqueta <code> img</code> 
+        <p>
+          El elemento img se emplea para insertar imágenes de forma sencilla en una página web.<br>
+          Mediante el atributo <code> src </code> se indica la ubicación de la imagen. Los tipos de imagen permitidos son: png, jpeg, gif, svg y WebP.<br>
+          También se recomienda el uso del atributo <code> alt</code>  con un texto alternativo a la imagen cuando las imágenes no sean solo decorativas. 
+          De este modo, en caso de que la imagen no se cargue, aparecerá ese texto.<br>
+          Los atributos <code> width</code>  y <code> height</code>  pueden incluirse para que el navegador conozca las medidas en píxeles de la imagen; de este modo, puede reservar el espacio que ocupará la imagen antes de cargarla.<br>
+          El siguiente ejemplo mostrará una imagen, guardada en una carpeta alojada en la misma carpeta que mi archivo HTML:<br>
+          Se escribe así:<br>
+          <code>&lt;img src="images/imagen_html5.png" alt="Imagen de ejemplo" width="300" height="250"&gt;</code>
+          <img src="images/foto.jpg" alt="Imagen de ejemplo" width="300" height="250"><br>
+        </p>
+      </li>
+      <li>El elemento <code> figure</code> 
+        <p>Se suele emplear como contenedor para añadir a las imágenes, tablas, diagramas, etc. un significado semántico y mostrar su título. Para ello, se usa, dentro del elemento figure, la etiqueta figcaption. Veremos un ejemplo en el apartado TABLAS.
+        </p>
+        </li>
+        <li> Objeto <code> iframe</code> 
+          <p>
+          Permite anidar, dentro de nuestra página HTML, un nuevo contenedor, en el que se carga otro documento HTML. 
+          Este documento puede estar en nuestro mismo servidor, o cargarse desde una dirección de internet. <br>
+          Por ejemplo:
+          <iframe src="https://aulavirtual.educa.jcyl.es/directorio//blog/html/" width="600" height="400">Si no lo puede cargar, aparecerá este texto.</iframe>
+          Se escribiría así:
+          <code>&lt;iframe src="https://sernagrp.com/blog/html/" width="600" height="400">Si no lo puede cargar, aparecerá este texto. &lt;/iframe &gt;</code>
+        </p>
+      </li>
+      </ol>
+      <h3>4.4. TABLAS</h3>
+      <p> Vamos a crear una tabla de ejemplo, para conocer los distintos elementos:
+        <ul>
+          <li><code>caption</code>: título de la tabla.</li>
+          <li> <code>thead</code>: filas de la cabecera.</li>
+          </li><code>tbody</code>: cuerpo de la tabla.</li>
+          <li> <code>tfoot</code>: pie de la tabla.</li>
+          <li> <code>tr</code>: (table row), que define cada fila. Dentro de cada fila deberás incluir las celdas:
+            <dl>
+              <dt>Celdas de cabecera:
+                <dd><code>th</code>: aparece en negrita.</dd>
+              </dt>
+              <dt>Celdas para el contenido:
+                <dd><code>td</code>: aparece texto normal.</dd>
+              </dt>
+            </dl>
+          </li>
+          <li> <code>colspan</code>: para combinar columnas.</li>
+          </li> <code>rowspan</code>: para combinar filas.</li>
+        </ul>
+      <br>
+      A continuación vamos a incluir un ejemplo:</p>
+      <figure>
+        <table>
+          <caption> <strong>Alumnado por cursos</strong><br>
+          2022/2023</caption>
+          <thead>
+               <tr>
+                 <th></th>
+                 <th colspan="4">Educación Secundaria Obligatoria</th>  
+                 <th colspan="4">Bachillerato</th>
+
+               </tr>
+               <tr>
+                 <th></th>
+                 <th>1º</th>
+                 <th>2º</th>
+                 <th>3º</th>
+                 <th>4º</th>
+                 <th>1º Humanidades</th>
+                 <th>2º Humanidades</th>
+                 <th>1º Ciencias</th>
+                 <th>2º Ciencias</th>
+               </tr>
+              </thead>
+            <tbody>
+              <tr>
+               <th>Alumnas:</th> 
+                 <td>45</td>
+                 <td>33</td>
+                 <td>21</td>
+                 <td>20</td>
+                 <td>34</td>
+                 <td>13</td>
+                 <td>65</td>
+                 <td>30</td>
+             </tr>
+             <tr>
+               <th>Alumnos:</th>
+               <td>42</td>
+               <td>40</td>
+               <td>15</td>
+               <td>22</td>
+               <td>25</td>
+               <td>10</td>
+               <td>67</td>
+               <td>25</td>
+             </tr>
+            </tbody>
+        </table>
+        <figcaption>Tabla de distribución de alumnado por curso.</figcaption>
+      </figure>
+      <h2>5. CAJAS</h2>
+        <p>CSS nos permite crear cajas, a partir de etiquetas <code>div</code>. 
+          A cada una de ellas se les asignará una clase para diferenciarlas. <br>
+          Esto va a permitirnos dos cosas:<br>
+          <ul>
+            <li>Mejorar el diseño de la página web.</li>
+             <li>Alinear elementos.</li>
+          </ul>
+          Vamos a ver cómo anidar cajas (una dentro de otra), para poder posicionar el contenido que contengan de forma más versátil.<br>
+          Si añado una caja fuera del <code>.div.contenedor</code>., podré hacer que sea tan ancha como la pantalla, y así que se quede como cabecera.<br>
+        </p>
+        <div class="Contenedor">
+          <div class = "caja1">
+            <h6>Este es el texto que introduzco en la caja 1, pero con más categoría.</h6>
+          </div>
+          <div class="caja2">
+            <p>Este es el texto que introduzco en la caja 2. Toma como referencia el borde (<code>border-box</code>).</p>
+          </div>
+          <div class="caja3">
+            <p>Este es el texto que introduzco en la caja 3. Toma como referencia el contenido (<code>content-box</code>).<br>
+             Normalmente se utiliza <code>border-box</code> porque es más cómodo. Para no tener que indicar individualmente que todas las cajas son de ese tipo se utiliza el selector universal(<code>*</code>). <br>
+             <pre><code>
+              *{
+                  box-sizing:border-box;
+              }
+            </code></pre>
+            </p>
+          </div>
+        </div>
+        <div class="fuera">
+          <p>Esta caja es independiente de las cajas 1, 2 y 3.</p>
+        </div>
+        
+
+      <h5>CONSIDERACIONES A TENER EN CUENTA EN CSS:</h5>
+      <p>
+        Las propiedades "<code>width</code>" y "<code>height</code>" se aplican por defecto al contenido. Vamos a ver cómo hacer que se aplique a la caja que contiene ese texto.
+        Para ello, vamos a utilizar la propiedad "<code>box-sizing</code>", con dos valores:
+        <ul>
+        <li> 
+          <code>content-box</code> (por defecto):Toma como referencia el contenido, y se le van añadiendo márgenes y/o bordes.
+        </li>
+        <li>
+         <code>border-box</code>: Toma como referencia el borde, que tendrá un margen exterior y otro interior, que lo separe del contenido.
+        </li>
+        </ul>
+      </p>
+    </div>
+    <div class="firma">
+      <p>NBJ. TIC II 25/26</p>
+    </div>
+  </body>
+</html>
